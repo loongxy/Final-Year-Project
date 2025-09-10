@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --main-color: #93a3e3;
+    --black: #222;
+    --white: #fff;
+    --brown: #3a1e00;
+    --red: #bb0000;
+    --green: #009e10;
+    --blue: #0300c4;
+    --light-black: #777;
+    --light-white: #fff9;
+    --light-brown: #e4dbd3;
+    --bg: #fefaf6;
+    --dark-bg: rgba(0,0,0,.7);
+    --light-bg: #f5f5f5;
+    --border: 2px solid var(--black);
+    --box-shadow: 3px 5px rgba(0,0,0,.1);
+    --text-shadow: 0 24px 48px rgba(0,0,0,.3);
+}
+
+*{
+    font-family: "Merienda", cursive;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+html::-webkit-scrollbar{
+    width: 16px;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--light-black);
+}
+
+section{
+    padding: 50px 10%;
+}
+
+body{
+    background: var(--bg);
+}
+
+/* heading */
+.heading{
+    background-size: cover !important;
+    background-position: center !important;
+    padding-top: 25px;
+    border-bottom: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+}
+
+/* btn */
+.btn{
+    display: inline-block;
+    background: var(--black);
+    margin-top: 10px;
+    color: var(--white);
+    font-size: 18px;
+    padding: 16px 36px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--light-black);
+}
+
+/* header */
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: var(--brown);
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.header .logo{
+    font-size: 38px;
+    color: var(--white);
+}
+
+.header .navbar a{
+    font-size: 22px;
+    margin-left: 20px;
+    color: var(--white);
+}
+
+.header .navbar a:hover{
+    color: var(--light-white);
+}
+
+#menu-btn{
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+}
+
+/* heading title */
+.heading-title{
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+/* package */
+.package-lf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: var(--light-bg);
+}
+
+.package-lf h3{
+    font-size: 30px;
+    color: var(--black);
+    text-align: center;
+}
+
+.package-bf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.package-bf h3{
+    font-size: 30px;
+    color: var(--black);
+    text-align: center;
+}
+
+.package-sf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.package-sf h3{
+    font-size: 30px;
+    color: var(--black);
+    text-align: center;
+}
+
+/* footer */
+.footer {
+    background-color: var(--brown);
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 32px;
+}
+
+.footer .box-container .box h3 {
+    color: var(--white);
+    font-size: 24px;
+    padding-bottom: 24px;
+}
+
+.footer .box-container .box a {
+    color: var(--light-brown);
+    font-size: 16px;
+    padding-bottom: 16px;
+    display: block;
+}
+
+.footer .box-container .box a i {
+    color: var(--main-color);
+    padding-right: 10px;
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 32px;
+}
+
+/* media queries */
+@media (max-width: 1200px){
+
+    section{
+        padding: 40px 5%;
+    }
+
+}
+
+@media (max-width: 991px){
+
+    html{
+        font-size: 60%;
+    }
+
+    section{
+        padding: 40px 32px;
+    }
+
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: var(--brown);
+        border-top: var(--border);
+        padding: 15px;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 15px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 450px){
+
+    html{
+        font-size: 40%;
+    }
+
+    .heading-title{
+        font-size: 50px;
+    }
+
+}
